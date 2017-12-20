@@ -25,29 +25,37 @@ int main(){
 		scanf("%d",&tamano);
 		scanf("%c",&caracter);
 		scanf("%c",&caracter);
-		if(tamano==0&&caracter=='0'){
+		if(tamano==0 && caracter=='0'){
 			return 0;
 		}
+		
 		if(tamano==1){
 			printf("%c\n",caracter);
 		}
+		
 		if(tamano>1){
+		
 			for(i=0;i<(tamano-1);i++){
 				for(j=tamano-1;j>i;j--){
 					printf(" ");
 				}
+				
 				for(j=0;j<(tamano+2*i);j++){
 					printf("%c",caracter);
 				}
+				
 				printf("\n");
 			}
+			
 			for(;i>=0;i--){
 				for(j=tamano-1;j>i;j--){
 					printf(" ");
 				}
+				
 				for(j=0;j<(tamano+2*i);j++){
 					printf("%c",caracter);
 				}
+				
 				printf("\n");
 			}
 		}
