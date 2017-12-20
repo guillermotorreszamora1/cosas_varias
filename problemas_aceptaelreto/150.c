@@ -16,6 +16,7 @@ Solution for the problem 150 of aceptaelreto.com
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include<stdio.h>
+
 int main(){
 	int tamano;
 	int i,j;
