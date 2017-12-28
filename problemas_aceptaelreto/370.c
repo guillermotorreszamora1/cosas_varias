@@ -19,11 +19,7 @@ Solution for the problem 370 of aceptaelreto.com
 #include<stdio.h>
 int main(){
 	int l1,l2;
-	int i,casos,
-
-temp
-
-;
+	int i,casos,temp;
 	scanf("%d",&casos);
 	for(i=0;i<casos;i++){
 		scanf("%d-%d",&l1,&l2);
