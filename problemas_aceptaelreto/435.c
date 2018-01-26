@@ -1,7 +1,7 @@
 /*
 
 Solution for the problem 435 of aceptaelreto.com
-    Copyright (C) 2017 Guillermo Torres Zamora
+    Copyright (C) 2017,2018 Guillermo Torres Zamora
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,25 +21,29 @@ Solution for the problem 435 of aceptaelreto.com
 int main(){
 	int i;
 	int len_cadena;
-	int n_ceros;
-	int n_nueves;
+	int digitos[10];
 	char cadena[1001];
+	int flag;
+	int frecuencia;
 	while(scanf("%s",cadena)!=EOF){
 		len_cadena = strlen(cadena);
-		n_ceros=0;
-		n_nueves=0;
+		for(i=0;i<10;i++){
+			digitos[i]=0;
+		}
 		for(i=0;i<len_cadena;i++){
-			if(cadena[i]=='0'){
-				n_ceros++;
-			}
-			if(cadena[i]=='9'){
-				n_nueves++;
+			digitos[cadena[i]-'0']++;
+		}
+		flag=1;
+		frecuencia = digitos[0];
+		for(i=0;i<10;i++){
+			if(digitos[i]!=frecuencia){
+				flag=0;
 			}
 		}
-		if(n_ceros==n_nueves){
-			printf("subnormal\n");
-		}else{
+		if(flag==0){
 			printf("no subnormal\n");
+		}else{
+			printf("subnormal\n");
 		}
 	}
 	return 0;
